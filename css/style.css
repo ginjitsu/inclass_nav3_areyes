@@ -1,0 +1,105 @@
+/*CSS Document*/
+
+:root {
+    --mainbr: 1px solid #222
+}
+
+html {
+    font-family: sans-serif;
+}
+
+a {
+    font-size: 1.4em;
+    text-decoration: none;
+    color: #222;
+}
+
+/*Nav Bar Stuff*/
+
+.nav {
+    height: 80px;
+    background-color: bisque;
+    border-top: var(--mainbr);
+    border-bottom: var(--mainbr);
+}
+
+/*Burger Icon*/
+
+.burger-icon {
+    display: none;
+}
+
+.burger-icon svg {
+    width: 80px;
+    height: 80px;
+    fill: rgb(141, 39, 59);
+}
+
+/*Desktop Nav*/
+
+.desktop-nav {
+    margin: 0;
+    padding: 0;
+}
+
+.desktop-nav li {
+    display: inline-block;
+    margin: 25px 20px 0 0;
+}
+
+.desktop-nav li a {
+    font-size: 1.8em;
+    transition: .2s all ease;
+}
+
+.desktop-nav li a:hover {
+    color: rgb(79, 43, 67);
+}
+
+/*Mobile Nav*/
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #222222ca;
+    transition: .3s all ease-in-out;
+    padding: 100px 0 0 0;
+}
+
+.mobile-nav li {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mobile-nav a {
+    color: #fff;
+    font-size: 60px;
+}
+
+/* Below is the CSS what of making side-nav appear but it is not the best way
+
+.burger-icon:hover ~ .mobile-nav {
+    width: 100vw;
+}
+
+.mobile-nav:hover {
+    width: 100vw;
+}
+
+*/
+
+@media screen and (max-width: 800px) {
+    .burger-icon {
+        display: block;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+}
+
